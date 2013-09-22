@@ -1,42 +1,33 @@
 source 'https://rubygems.org'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-# Use sqlite3 as the database for Active Record
-# Use SCSS for stylesheets
-# Use Uglifier as compressor for JavaScript assets
-# Use CoffeeScript for .js.coffee assets and views
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-# Use jquery as the JavaScript library
-# Turbolinks makes following links in your web application faster. Read more: h
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-  # bundle exec rake doc:rails generates the API under doc/api.
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
+gem 'bootstrap-sass', '2.3.2.0'
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'
   gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+
+  # Uncomment this line on OS X.
+  gem 'growl', '1.0.3'
+
+  # Uncomment these lines on Linux.
+  # gem 'libnotify', '0.8.0'
+
+  # Uncomment these lines on Windows.
+  # gem 'rb-notifu', '0.0.4'
+  # gem 'win32console', '1.3.2'
+  # gem 'wdm', '0.1.0'
 end
 
 gem 'sass-rails', '4.0.0'
